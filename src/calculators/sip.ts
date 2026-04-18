@@ -10,7 +10,7 @@ const round = (num: number): number => Math.round(num);
 export function calculateSIP(
   monthlyInvestment: number,
   annualRate: number,
-  years: number
+  years: number,
 ): number {
   const r = annualRate / 100 / 12; // monthly rate
   const n = years * 12; // months
@@ -31,7 +31,7 @@ export function calculateSIPWithInflation(
   monthlyInvestment: number,
   annualRate: number,
   inflationRate: number,
-  years: number
+  years: number,
 ): number {
   const nominalFutureValue = calculateSIP(monthlyInvestment, annualRate, years);
   const inflationFactor = Math.pow(1 + inflationRate / 100, years);

@@ -14,7 +14,7 @@ export interface FDResult {
 export function calculateFD(
   principal: number,
   annualRate: number,
-  years: number
+  years: number,
 ): FDResult {
   const r = annualRate / 100;
   const maturityAmount = principal * Math.pow(1 + r, years);

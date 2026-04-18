@@ -9,7 +9,7 @@ const round = (num: number): number => Math.round(num);
 export function calculateCAGR(
   beginValue: number,
   endValue: number,
-  years: number
+  years: number,
 ): number {
   const cagr = Math.pow(endValue / beginValue, 1 / years) - 1;
 

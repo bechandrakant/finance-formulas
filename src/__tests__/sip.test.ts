@@ -1,4 +1,4 @@
-import { calculateSIP, calculateSIPWithInflation } from '../calculators/sip';
+import { calculateSIP, calculateSIPWithInflation } from "../calculators/sip";
 
 describe("calculateSIP", () => {
   test("calculates SIP future value correctly", () => {

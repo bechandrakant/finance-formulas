@@ -15,7 +15,7 @@ export interface EMIResult {
 export function calculateEMI(
   loanAmount: number,
   annualRate: number,
-  years: number
+  years: number,
 ): EMIResult {
   const r = annualRate / 100 / 12; // monthly rate
   const n = years * 12;
