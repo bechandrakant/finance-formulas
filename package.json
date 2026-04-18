@@ -41,6 +41,9 @@
   ],
   "author": "Chandrakant <chandrakantsavvy@gmail.com> (https://github.com/bechandrakant)",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
