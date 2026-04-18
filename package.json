@@ -1,0 +1,19 @@
+{
+  "name": "finance-formulas",
+  "version": "1.0.1",
+  "description": "Simple finance calculation utilities",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "finance",
+    "interest",
+    "calculator"
+  ],
+  "author": "Chandrakant <chandrakantsavvy@gmail.com> (https://github.com/bechandrakant)",
+  "license": "MIT"
+}
