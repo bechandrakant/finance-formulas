@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "tsconfig": "tsconfig.json",
+  "readme": "README.md",
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "sort": ["source-order"],
+  "excludePrivate": true,
+  "excludeProtected": true
+}

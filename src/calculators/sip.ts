@@ -1,12 +1,22 @@
 // helper
 const round = (num: number): number => Math.round(num);
 
-/* ================================
-   SIP CALCULATOR
-   Monthly investment, annual return %, years
-   Formula: Future Value of SIP
-================================ */
-
+/**
+ * Calculate SIP (Systematic Investment Plan) maturity amount.
+ *
+ * Calculates the future value of a series of monthly investments at a given
+ * annual return rate.
+ *
+ * @param monthlyInvestment Amount invested every month
+ * @param annualRate Expected annual return rate (in %)
+ * @param years Investment duration in years
+ * @returns Final maturity value (rounded to nearest integer)
+ *
+ * @example
+ * // Invest 5000/month at 12% annual return for 10 years
+ * calculateSIP(5000, 12, 10);
+ * // => 1161695
+ */
 export function calculateSIP(
   monthlyInvestment: number,
   annualRate: number,
@@ -21,12 +31,23 @@ export function calculateSIP(
   return round(futureValue);
 }
 
-/* ================================
-   SIP CALCULATOR WITH INFLATION ADJUSTMENT
-   Monthly investment, annual return %, inflation %, years
-   Formula: Real Future Value of SIP (adjusted for inflation)
-================================ */
-
+/**
+ * Calculate inflation-adjusted SIP maturity amount.
+ *
+ * Calculates the real (inflation-adjusted) future value of a series of
+ * monthly investments, accounting for inflation.
+ *
+ * @param monthlyInvestment Amount invested every month
+ * @param annualRate Expected annual return rate (in %)
+ * @param inflationRate Expected annual inflation rate (in %)
+ * @param years Investment duration in years
+ * @returns Inflation-adjusted maturity value (rounded to nearest integer)
+ *
+ * @example
+ * // Invest 5000/month at 12% with 3% inflation for 10 years
+ * calculateSIPWithInflation(5000, 12, 3, 10);
+ * // => 864410
+ */
 export function calculateSIPWithInflation(
   monthlyInvestment: number,
   annualRate: number,
