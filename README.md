@@ -1,4 +1,10 @@
-# finance-formulas
+# finance-formulas 💰
+
+![npm](https://img.shields.io/npm/v/finance-formulas)
+![npm downloads](https://img.shields.io/npm/dm/finance-formulas)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bechandrakant/finance-formulas/ci.yml)
+![License](https://img.shields.io/npm/l/finance-formulas)
+![TypeScript](https://img.shields.io/badge/TypeScript-supported-blue)
 
 Simple finance calculators for JavaScript/TypeScript with full type safety and comprehensive tests.
 
