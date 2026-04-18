@@ -3,8 +3,6 @@
 [![npm version](https://img.shields.io/npm/v/finance-formulas.svg)](https://www.npmjs.com/package/finance-formulas)
 [![CI](https://github.com/bechandrakant/finance-formulas/actions/workflows/ci.yml/badge.svg)](https://github.com/bechandrakant/finance-formulas/actions)
 [![Downloads](https://img.shields.io/npm/dm/finance-formulas)](https://www.npmjs.com/package/finance-formulas)
-![npm](https://img.shields.io/npm/v/finance-formulas)
-![npm downloads](https://img.shields.io/npm/dm/finance-formulas)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bechandrakant/finance-formulas/ci.yml)
 ![License](https://img.shields.io/npm/l/finance-formulas)
 ![TypeScript](https://img.shields.io/badge/TypeScript-supported-blue)
