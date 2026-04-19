@@ -151,6 +151,7 @@ Calculates total interest paid on a loan.
 Useful complement to `calculateEMI` for understanding the true cost of borrowing.
 
 **Example:**
+
 ```typescript
 // Get EMI for a 500000 loan at 8.5% for 20 years
 const emiResult = calculateEMI(500000, 8.5, 20);
