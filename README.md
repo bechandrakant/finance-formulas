@@ -23,6 +23,7 @@ import {
   calculateEMI,
   calculateFD,
   calculateCAGR,
+  calculateTotalInterest,
 } from "finance-formulas";
 
 // SIP
@@ -36,6 +37,10 @@ calculateSIPWithInflation(5000, 12, 3, 10);
 // EMI
 calculateEMI(500000, 8.5, 20);
 // → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }
+
+// Total Interest Paid
+calculateTotalInterest(500000, 4339, 20);
+// → 541360
 
 // FD
 calculateFD(100000, 7, 5);
@@ -57,12 +62,14 @@ import {
   calculateEMI,
   calculateFD,
   calculateCAGR,
+  calculateTotalInterest,
   EMIResult,
   FDResult,
 } from "finance-formulas";
 
 const emiResult: EMIResult = calculateEMI(500000, 8.5, 20);
 const fdResult: FDResult = calculateFD(100000, 7, 5);
+const totalInt: number = calculateTotalInterest(500000, 4339, 20);
 ```
 
 ## Testing
@@ -131,6 +138,27 @@ Returns:
   maturityAmount: number; // Final maturity amount
   interestEarned: number; // Total interest earned
 }
+```
+
+### `calculateTotalInterest(principal: number, emi: number, years: number): number`
+
+Calculates total interest paid on a loan.
+
+- `principal`: Principal loan amount
+- `emi`: Monthly EMI amount
+- `years`: Loan tenure in years
+
+Useful complement to `calculateEMI` for understanding the true cost of borrowing.
+
+**Example:**
+```typescript
+// Get EMI for a 500000 loan at 8.5% for 20 years
+const emiResult = calculateEMI(500000, 8.5, 20);
+// → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }
+
+// Calculate total interest separately
+const totalInterest = calculateTotalInterest(500000, 4339, 20);
+// → 541360
 ```
 
 ### `calculateCAGR(beginValue: number, endValue: number, years: number): number`
