@@ -1,6 +1,6 @@
 {
   "name": "finance-formulas",
-  "version": "0.0.0-development",
+  "version": "1.4.0",
   "description": "Simple finance calculation utilities",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
