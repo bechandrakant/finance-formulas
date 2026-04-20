@@ -183,6 +183,7 @@ for interest rates between 5% and 10%.
 Returns estimated years to double the investment.
 
 **Example:**
+
 ```typescript
 // At 7% annual return, money doubles in about 10.29 years
 timeToDouble(7);
