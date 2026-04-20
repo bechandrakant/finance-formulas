@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/bechandrakant/finance-formulas/compare/v1.4.0...v1.5.0) (2026-04-20)
+
+
+### Features
+
+* add timeToDouble calculator using Rule of 72 ([4148ff4](https://github.com/bechandrakant/finance-formulas/commit/4148ff43e94fcee9055cbf10673a16248f0e4785))
+
 # [1.4.0](https://github.com/bechandrakant/finance-formulas/compare/v1.3.1...v1.4.0) (2026-04-19)
 
 
