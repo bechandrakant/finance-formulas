@@ -24,6 +24,7 @@ import {
   calculateFD,
   calculateCAGR,
   calculateTotalInterest,
+  timeToDouble,
 } from "finance-formulas";
 
 // SIP
@@ -41,6 +42,10 @@ calculateEMI(500000, 8.5, 20);
 // Total Interest Paid
 calculateTotalInterest(500000, 4339, 20);
 // → 541360
+
+// Time to Double Money (Rule of 72)
+timeToDouble(7);
+// → 10.285714285714286
 
 // FD
 calculateFD(100000, 7, 5);
@@ -63,6 +68,7 @@ import {
   calculateFD,
   calculateCAGR,
   calculateTotalInterest,
+  timeToDouble,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -70,6 +76,7 @@ import {
 const emiResult: EMIResult = calculateEMI(500000, 8.5, 20);
 const fdResult: FDResult = calculateFD(100000, 7, 5);
 const totalInt: number = calculateTotalInterest(500000, 4339, 20);
+const doubleTime: number = timeToDouble(7);
 ```
 
 ## Testing
@@ -160,6 +167,30 @@ const emiResult = calculateEMI(500000, 8.5, 20);
 // Calculate total interest separately
 const totalInterest = calculateTotalInterest(500000, 4339, 20);
 // → 541360
+```
+
+### `timeToDouble(rate: number): number`
+
+Estimates years required to double money using the Rule of 72.
+
+The Rule of 72 is a simple formula that estimates how long it will take
+for an investment to double in value at a given annual interest rate.
+It's a quick mental math approximation that's surprisingly accurate
+for interest rates between 5% and 10%.
+
+- `rate`: Annual interest rate (in percentage, e.g., 7 for 7%)
+
+Returns estimated years to double the investment.
+
+**Example:**
+```typescript
+// At 7% annual return, money doubles in about 10.29 years
+timeToDouble(7);
+// → 10.285714285714286
+
+// At 8% annual return, money doubles in about 9 years
+timeToDouble(8);
+// → 9
 ```
 
 ### `calculateCAGR(beginValue: number, endValue: number, years: number): number`

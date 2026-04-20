@@ -4,6 +4,7 @@ import { calculateEMI, EMIResult } from "./calculators/emi";
 import { calculateFD, FDResult } from "./calculators/fd";
 import { calculateCAGR } from "./calculators/cagr";
 import { calculateTotalInterest } from "./calculators/totalInterest";
+import { timeToDouble } from "./calculators/timeToDouble";
 
 // Re-export all calculator functions
 export {
@@ -13,5 +14,6 @@ export {
   calculateFD,
   calculateCAGR,
   calculateTotalInterest,
+  timeToDouble,
 };
 export type { EMIResult, FDResult };
