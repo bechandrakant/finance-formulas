@@ -25,6 +25,7 @@ import {
   calculateCAGR,
   calculateTotalInterest,
   timeToDouble,
+  retirementCorpus,
 } from "finance-formulas";
 
 // SIP
@@ -54,6 +55,10 @@ calculateFD(100000, 7, 5);
 // CAGR
 calculateCAGR(10000, 20000, 3);
 // → 26 (%)
+
+// Retirement Corpus
+retirementCorpus(50000, 3, 20, 30, 7);
+// → 13447265
 ```
 
 ## TypeScript Support
@@ -69,6 +74,7 @@ import {
   calculateCAGR,
   calculateTotalInterest,
   timeToDouble,
+  retirementCorpus,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -77,6 +83,7 @@ const emiResult: EMIResult = calculateEMI(500000, 8.5, 20);
 const fdResult: FDResult = calculateFD(100000, 7, 5);
 const totalInt: number = calculateTotalInterest(500000, 4339, 20);
 const doubleTime: number = timeToDouble(7);
+const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
 ```
 
 ## Testing
@@ -203,3 +210,36 @@ Calculates Compound Annual Growth Rate.
 - `years`: Time period in years
 
 Returns the CAGR as a percentage (rounded to nearest integer).
+
+### `retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number`
+
+Calculates the lump sum retirement corpus needed to sustain expenses
+throughout retirement, accounting for inflation during the accumulation
+phase and investment returns during the retirement phase.
+
+This function helps answer: "How much money do I need at retirement?"
+
+- `monthlyExpense`: Current monthly expense amount
+- `inflationRate`: Annual inflation rate (percentage, e.g., 3 for 3%)
+- `yearsToRetirement`: Number of years until retirement
+- `yearsAfterRetirement`: Number of years to sustain in retirement
+- `returnRate`: Expected annual return rate (percentage, e.g., 7 for 7%)
+
+Returns the required retirement corpus amount (rounded to nearest integer).
+
+**Example:**
+
+```typescript
+// Calculate corpus needed for retirement:
+// - Current monthly expense: ₹50,000
+// - Inflation rate: 3% annually
+// - 20 years until retirement
+// - 30 years of retirement to sustain
+// - Expected returns: 7% annually
+retirementCorpus(50000, 3, 20, 30, 7);
+// → 13447265
+
+// For lower monthly expenses
+retirementCorpus(30000, 3, 20, 30, 7);
+// → 8068359
+```
