@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/bechandrakant/finance-formulas/compare/v1.5.1...v1.5.2) (2026-04-25)
+
+
+### Bug Fixes
+
+* update retirement corpus example output to match calculated value ([934cf7b](https://github.com/bechandrakant/finance-formulas/commit/934cf7bd4bde7fc5e073ce3a9d336e9f9440f4c1))
+
 ## [1.5.1](https://github.com/bechandrakant/finance-formulas/compare/v1.5.0...v1.5.1) (2026-04-25)
 
 
