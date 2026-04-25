@@ -19,7 +19,7 @@ const round = (num: number): number => Math.round(num);
  * // Calculate corpus needed: ₹50,000 monthly expense, 3% inflation, 20 years to retirement,
  * // 30 years after retirement, 7% returns
  * retirementCorpus(50000, 3, 20, 30, 7);
- * // => 11537208
+ * // => 13447265
  */
 export function retirementCorpus(
   monthlyExpense: number,
