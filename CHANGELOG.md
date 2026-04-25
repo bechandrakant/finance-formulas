@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/bechandrakant/finance-formulas/compare/v1.5.0...v1.5.1) (2026-04-25)
+
+
+### Bug Fixes
+
+* trigger release ([fa5d46a](https://github.com/bechandrakant/finance-formulas/commit/fa5d46af2a96fa5b907fad5b86c6b66665580b0f))
+
 # [1.5.0](https://github.com/bechandrakant/finance-formulas/compare/v1.4.0...v1.5.0) (2026-04-20)
 
 
