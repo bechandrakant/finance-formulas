@@ -26,6 +26,7 @@ import {
   calculateTotalInterest,
   timeToDouble,
   retirementCorpus,
+  lumpsumFutureValue,
 } from "finance-formulas";
 
 // SIP
@@ -59,6 +60,10 @@ calculateCAGR(10000, 20000, 3);
 // Retirement Corpus
 retirementCorpus(50000, 3, 20, 30, 7);
 // → 13447265
+
+// Lump Sum Future Value
+lumpsumFutureValue(1000, 5, 10);
+// → 1629
 ```
 
 ## TypeScript Support
@@ -75,6 +80,7 @@ import {
   calculateTotalInterest,
   timeToDouble,
   retirementCorpus,
+  lumpsumFutureValue,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -84,6 +90,7 @@ const fdResult: FDResult = calculateFD(100000, 7, 5);
 const totalInt: number = calculateTotalInterest(500000, 4339, 20);
 const doubleTime: number = timeToDouble(7);
 const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
+const futureValue: number = lumpsumFutureValue(1000, 5, 10);
 ```
 
 ## Testing
@@ -210,6 +217,32 @@ Calculates Compound Annual Growth Rate.
 - `years`: Time period in years
 
 Returns the CAGR as a percentage (rounded to nearest integer).
+
+### `lumpsumFutureValue(principal: number, annualRate: number, years: number): number`
+
+Calculates the future value of a lump sum investment using compound interest.
+
+Used when someone invests once and lets it grow over time.
+
+Formula: FV = P (1 + r)^n
+
+- `principal`: Initial investment amount (present value)
+- `annualRate`: Annual interest rate as a percentage (e.g., 5 for 5%)
+- `years`: Number of years the investment will grow
+
+Returns the future value of the investment (rounded to nearest integer).
+
+**Example:**
+
+```typescript
+// Calculate future value of $1000 at 5% annual rate for 10 years
+lumpsumFutureValue(1000, 5, 10);
+// → 1629
+
+// Calculate future value of ₹50000 at 7% for 5 years
+lumpsumFutureValue(50000, 7, 5);
+// → 70128
+```
 
 ### `retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number`
 
