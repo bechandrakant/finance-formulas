@@ -21,7 +21,7 @@ const round = (num: number): number => Math.round(num);
 export function presentValue(
   futureValue: number,
   annualRate: number,
-  years: number
+  years: number,
 ): number {
   const r = annualRate / 100;
   const result = futureValue / Math.pow(1 + r, years);
