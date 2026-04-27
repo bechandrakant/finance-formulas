@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/bechandrakant/finance-formulas/compare/v1.5.2...v1.6.0) (2026-04-27)
+
+
+### Features
+
+* add presentValue calculator for lump sum present value calculation ([384ca7f](https://github.com/bechandrakant/finance-formulas/commit/384ca7fba1095121cb64b8cedf3d2809f6c3a1c6))
+
 ## [1.5.2](https://github.com/bechandrakant/finance-formulas/compare/v1.5.1...v1.5.2) (2026-04-25)
 
 
