@@ -7,6 +7,7 @@ import { calculateTotalInterest } from "./calculators/totalInterest";
 import { timeToDouble } from "./calculators/timeToDouble";
 import { retirementCorpus } from "./calculators/retirementCorpus";
 import { lumpsumFutureValue } from "./calculators/futureValue";
+import { presentValue } from "./calculators/presentValue";
 
 // Re-export all calculator functions
 export {
@@ -19,5 +20,6 @@ export {
   timeToDouble,
   retirementCorpus,
   lumpsumFutureValue,
+  presentValue,
 };
 export type { EMIResult, FDResult };

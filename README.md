@@ -27,6 +27,7 @@ import {
   timeToDouble,
   retirementCorpus,
   lumpsumFutureValue,
+  presentValue,
 } from "finance-formulas";
 
 // SIP
@@ -64,6 +65,10 @@ retirementCorpus(50000, 3, 20, 30, 7);
 // Lump Sum Future Value
 lumpsumFutureValue(1000, 5, 10);
 // → 1629
+
+// Present Value
+presentValue(1629, 5, 10);
+// → 1000
 ```
 
 ## TypeScript Support
@@ -81,6 +86,7 @@ import {
   timeToDouble,
   retirementCorpus,
   lumpsumFutureValue,
+  presentValue,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -91,6 +97,7 @@ const totalInt: number = calculateTotalInterest(500000, 4339, 20);
 const doubleTime: number = timeToDouble(7);
 const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
 const futureValue: number = lumpsumFutureValue(1000, 5, 10);
+const presentVal: number = presentValue(1629, 5, 10);
 ```
 
 ## Testing
@@ -242,6 +249,32 @@ lumpsumFutureValue(1000, 5, 10);
 // Calculate future value of ₹50000 at 7% for 5 years
 lumpsumFutureValue(50000, 7, 5);
 // → 70128
+```
+
+### `presentValue(futureValue: number, annualRate: number, years: number): number`
+
+Calculates the present value of future money using compound interest.
+
+Used to know today's value of future money. This is the reverse of future value calculation.
+
+Formula: PV = FV / (1 + r)^n
+
+- `futureValue`: Future value amount
+- `annualRate`: Annual interest rate as a percentage (e.g., 5 for 5%)
+- `years`: Number of years until the future value is received
+
+Returns the present value of the future amount (rounded to nearest integer).
+
+**Example:**
+
+```typescript
+// Calculate present value of $1629 received after 10 years at 5% annual rate
+presentValue(1629, 5, 10);
+// → 1000
+
+// Calculate present value of ₹70128 received after 5 years at 7% annual rate
+presentValue(70128, 7, 5);
+// → 50000
 ```
 
 ### `retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number`
