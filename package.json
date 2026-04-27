@@ -39,6 +39,11 @@
       "import": "./dist/calculators/timeToDouble.js",
       "require": "./dist/calculators/timeToDouble.cjs",
       "types": "./dist/calculators/timeToDouble.d.ts"
+    },
+    "./future-value": {
+      "import": "./dist/calculators/futureValue.js",
+      "require": "./dist/calculators/futureValue.cjs",
+      "types": "./dist/calculators/futureValue.d.ts"
     }
   },
   "types": "dist/index.d.ts",
@@ -46,7 +51,7 @@
   "scripts": {
     "build": "npm run build:bundle && npm run build:split && npm run build:types",
     "build:bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.cjs",
-    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
+    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
     "build:types": "tsc --emitDeclarationOnly --outDir dist",
     "test": "jest",
     "test:watch": "jest --watch",
