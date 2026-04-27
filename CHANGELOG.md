@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/bechandrakant/finance-formulas/compare/v1.6.0...v1.6.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* add repository and homepage fields to package.json ([4139c22](https://github.com/bechandrakant/finance-formulas/commit/4139c22951791677cc788970cfafcb0bb09a335a))
+
 # [1.6.0](https://github.com/bechandrakant/finance-formulas/compare/v1.5.2...v1.6.0) (2026-04-27)
 
 
