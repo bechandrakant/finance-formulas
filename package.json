@@ -92,6 +92,11 @@
     "formulas"
   ],
   "author": "Chandrakant <chandrakantsavvy@gmail.com> (https://github.com/bechandrakant)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bechandrakant/finance-formulas.git"
+  },
+  "homepage": "https://github.com/bechandrakant/finance-formulas#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
