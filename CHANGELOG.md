@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/bechandrakant/finance-formulas/compare/v1.6.1...v1.7.0) (2026-05-04)
+
+
+### Features
+
+* add compoundWithVariableReturns calculator for real-world variable return scenarios ([73328ba](https://github.com/bechandrakant/finance-formulas/commit/73328bae3cd704c5483c9314c9a1bf0753195702))
+
 ## [1.6.1](https://github.com/bechandrakant/finance-formulas/compare/v1.6.0...v1.6.1) (2026-04-27)
 
 
