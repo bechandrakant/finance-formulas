@@ -104,7 +104,10 @@ const doubleTime: number = timeToDouble(7);
 const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
 const futureValue: number = lumpsumFutureValue(1000, 5, 10);
 const presentVal: number = presentValue(1629, 5, 10);
-const variableCompound: number = compoundWithVariableReturns(1000, [4, 9, -2, 12]);
+const variableCompound: number = compoundWithVariableReturns(
+  1000,
+  [4, 9, -2, 12],
+);
 ```
 
 ## Testing
