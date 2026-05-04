@@ -49,6 +49,11 @@
       "import": "./dist/calculators/presentValue.js",
       "require": "./dist/calculators/presentValue.cjs",
       "types": "./dist/calculators/presentValue.d.ts"
+    },
+    "./variable-return": {
+      "import": "./dist/calculators/variableReturn.js",
+      "require": "./dist/calculators/variableReturn.cjs",
+      "types": "./dist/calculators/variableReturn.d.ts"
     }
   },
   "types": "dist/index.d.ts",
@@ -56,7 +61,7 @@
   "scripts": {
     "build": "npm run build:bundle && npm run build:split && npm run build:types",
     "build:bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.cjs",
-    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
+    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
     "build:types": "tsc --emitDeclarationOnly --outDir dist",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -82,6 +87,9 @@
     "lump-sum",
     "future-value",
     "present-value",
+    "variable-returns",
+    "volatile-returns",
+    "real-world-compounding",
     "discounting",
     "compound-interest",
     "retirement",

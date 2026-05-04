@@ -8,6 +8,7 @@ import { timeToDouble } from "./calculators/timeToDouble";
 import { retirementCorpus } from "./calculators/retirementCorpus";
 import { lumpsumFutureValue } from "./calculators/futureValue";
 import { presentValue } from "./calculators/presentValue";
+import { compoundWithVariableReturns } from "./calculators/variableReturn";
 
 // Re-export all calculator functions
 export {
@@ -21,5 +22,6 @@ export {
   retirementCorpus,
   lumpsumFutureValue,
   presentValue,
+  compoundWithVariableReturns,
 };
 export type { EMIResult, FDResult };

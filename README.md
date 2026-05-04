@@ -28,6 +28,7 @@ import {
   retirementCorpus,
   lumpsumFutureValue,
   presentValue,
+  compoundWithVariableReturns,
 } from "finance-formulas";
 
 // SIP
@@ -69,6 +70,10 @@ lumpsumFutureValue(1000, 5, 10);
 // Present Value
 presentValue(1629, 5, 10);
 // → 1000
+
+// Variable Return Compounding
+compoundWithVariableReturns(1000, [4, 9, -2, 12]);
+// → 1244
 ```
 
 ## TypeScript Support
@@ -87,6 +92,7 @@ import {
   retirementCorpus,
   lumpsumFutureValue,
   presentValue,
+  compoundWithVariableReturns,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -98,6 +104,7 @@ const doubleTime: number = timeToDouble(7);
 const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
 const futureValue: number = lumpsumFutureValue(1000, 5, 10);
 const presentVal: number = presentValue(1629, 5, 10);
+const variableCompound: number = compoundWithVariableReturns(1000, [4, 9, -2, 12]);
 ```
 
 ## Testing
@@ -275,6 +282,36 @@ presentValue(1629, 5, 10);
 // Calculate present value of ₹70128 received after 5 years at 7% annual rate
 presentValue(70128, 7, 5);
 // → 50000
+```
+
+### `compoundWithVariableReturns(principal: number, yearlyReturns: number[]): number`
+
+Calculates compound value with variable yearly returns.
+
+Used when investment returns fluctuate year to year, providing a more realistic
+view of compounding in real-world scenarios where returns vary based on market conditions.
+
+Formula: Final Value = Principal × (1 + r₁) × (1 + r₂) × ... × (1 + rₙ)
+
+- `principal`: Initial investment amount
+- `yearlyReturns`: Array of annual returns as percentages (e.g., [4, 9, -2, 12] for 4%, 9%, -2%, 12%)
+
+Returns the final value after applying all yearly returns (rounded to nearest integer).
+
+**Example:**
+
+```typescript
+// Portfolio with variable returns over 4 years: 4%, 9%, -2%, 12%
+compoundWithVariableReturns(1000, [4, 9, -2, 12]);
+// → 1244
+
+// Real market scenario: mixed positive and negative returns
+compoundWithVariableReturns(10000, [5, -3, 8, 12, -1, 6]);
+// → 12485
+
+// High volatility scenario: recover from major loss
+compoundWithVariableReturns(1000, [-50, 100]);
+// → 1000
 ```
 
 ### `retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number`
