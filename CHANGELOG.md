@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/bechandrakant/finance-formulas/compare/v1.7.0...v1.8.0) (2026-05-05)
+
+
+### Features
+
+* add SWP calculator ([ccb50c0](https://github.com/bechandrakant/finance-formulas/commit/ccb50c0d90d31a27879d22e661bb66a60f5fe67c))
+
 # [1.7.0](https://github.com/bechandrakant/finance-formulas/compare/v1.6.1...v1.7.0) (2026-05-04)
 
 
