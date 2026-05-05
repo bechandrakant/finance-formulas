@@ -1,376 +1,173 @@
-# finance-formulas 💰
+# finance-formulas
+
+## Build finance calculators in minutes, not weekends.
+
+Every fintech app eventually needs the same formulas.
+
+SIP. SWP. EMI. FD. CAGR. Retirement corpus. Present value. Future value.
+
+And somehow, every developer ends up rewriting them from scratch.
+
+`finance-formulas` gives you clean, tested, TypeScript-first finance math you can drop into your app and ship.
+
+## The Finance Math Layer Your App Deserves
+
+Finance calculators look simple until they are wrong.
+
+A tiny rounding bug can break an EMI estimate. A slightly off return formula can mislead a retirement planner. A copied spreadsheet formula can quietly drift away from what your product actually needs.
+
+This package exists so developers, indie hackers, fintech builders, and students can stop rebuilding the same formulas again and again.
+
+Use it like a tiny finance engine:
+
+- Plug it into calculators, dashboards, onboarding flows, and learning tools
+- Trust tested formulas instead of random snippets
+- Keep your app code focused on product, UI, and user experience
+
+## Badges
 
 [![npm version](https://img.shields.io/npm/v/finance-formulas.svg)](https://www.npmjs.com/package/finance-formulas)
-[![CI](https://github.com/bechandrakant/finance-formulas/actions/workflows/ci.yml/badge.svg)](https://github.com/bechandrakant/finance-formulas/actions)
-[![Downloads](https://img.shields.io/npm/dm/finance-formulas)](https://www.npmjs.com/package/finance-formulas)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bechandrakant/finance-formulas/ci.yml)
+[![Downloads](https://img.shields.io/npm/dw/finance-formulas)](https://www.npmjs.com/package/finance-formulas)
 ![License](https://img.shields.io/npm/l/finance-formulas)
+[![CI](https://github.com/bechandrakant/finance-formulas/actions/workflows/ci.yml/badge.svg)](https://github.com/bechandrakant/finance-formulas/actions)
 ![TypeScript](https://img.shields.io/badge/TypeScript-supported-blue)
-[![semantic-release](https://img.shields.io/badge/semantic--release-automated-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-Simple finance calculators for JavaScript/TypeScript with full type safety and comprehensive tests.
+## Why This Exists
+
+Finance math is easy to underestimate.
+
+You start with one SIP calculator.
+
+Then someone asks for inflation.
+
+Then EMI.
+
+Then retirement corpus.
+
+Then SWP for FIRE planning.
+
+Then variable returns because real markets are not flat lines.
+
+Before you know it, your app has a pile of formulas, edge cases, rounding differences, and tests you did not plan to write.
+
+`finance-formulas` packages those battle-tested formulas into simple, predictable functions.
+
+No drama. No hidden state. Just numbers in, numbers out.
+
+## Features
+
+- SIP calculator for monthly wealth building
+- SWP calculator for retirement and FIRE withdrawal planning
+- EMI calculator for loans and mortgages
+- FD calculator for fixed deposit maturity values
+- CAGR calculator for investment growth comparison
+- Present Value and Future Value calculators
+- Retirement Corpus calculator for long-term planning
+- Rule of 72 / Time to Double calculator
+- Variable Returns compounding for real-world market scenarios
+- Inflation-adjusted SIP support
+- Total loan interest calculation
 
 ## Install
 
+```bash
 npm install finance-formulas
+```
 
-## Usage
+```bash
+yarn add finance-formulas
+```
 
-```js
-import {
-  calculateSIP,
-  calculateSIPWithInflation,
-  calculateEMI,
-  calculateFD,
-  calculateCAGR,
-  calculateTotalInterest,
-  timeToDouble,
-  retirementCorpus,
-  lumpsumFutureValue,
-  presentValue,
-  compoundWithVariableReturns,
-  calculateSWP,
-} from "finance-formulas";
+```bash
+pnpm add finance-formulas
+```
 
-// SIP
+## Quick Examples
+
+### Plan Monthly Wealth Growth
+
+```ts
+import { calculateSIP } from "finance-formulas";
+
 calculateSIP(5000, 12, 10);
-// → 1161695
+// 1161695
+```
 
-// SIP with inflation adjustment
-calculateSIPWithInflation(5000, 12, 3, 10);
-// → 864410
+### Estimate How Long Retirement Money Lasts
 
-// EMI
+```ts
+import { calculateSWP } from "finance-formulas";
+
+calculateSWP(1000000, 15000, 6);
+// 82 months
+```
+
+### Show Loan EMI Instantly
+
+```ts
+import { calculateEMI } from "finance-formulas";
+
 calculateEMI(500000, 8.5, 20);
-// → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }
+// { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }
+```
 
-// Total Interest Paid
-calculateTotalInterest(500000, 4339, 20);
-// → 541360
+### Model Real-World Market Returns
 
-// Time to Double Money (Rule of 72)
-timeToDouble(7);
-// → 10.285714285714286
+```ts
+import { compoundWithVariableReturns } from "finance-formulas";
 
-// FD
-calculateFD(100000, 7, 5);
-// → { maturityAmount: 140255, interestEarned: 40255 }
-
-// CAGR
-calculateCAGR(10000, 20000, 3);
-// → 26 (%)
-
-// Retirement Corpus
-retirementCorpus(50000, 3, 20, 30, 7);
-// → 13447265
-
-// Lump Sum Future Value
-lumpsumFutureValue(1000, 5, 10);
-// → 1629
-
-// Present Value
-presentValue(1629, 5, 10);
-// → 1000
-
-// Variable Return Compounding
 compoundWithVariableReturns(1000, [4, 9, -2, 12]);
-// → 1244
-
-// SWP
-calculateSWP(1000000, 15000, 6);
-// → 82
+// 1244
 ```
 
-## TypeScript Support
+## Who Is This For?
 
-This package includes full TypeScript definitions. All functions are properly typed:
+- Fintech apps that need fast, reliable calculators
+- Indie hackers shipping money tools
+- SaaS dashboards with finance widgets
+- FIRE and retirement planning projects
+- Interview prep and coding practice
+- Students learning finance math
+- Builders tired of copying formulas from random blog posts
 
-```typescript
-import {
-  calculateSIP,
-  calculateSIPWithInflation,
-  calculateEMI,
-  calculateFD,
-  calculateCAGR,
-  calculateTotalInterest,
-  timeToDouble,
-  retirementCorpus,
-  lumpsumFutureValue,
-  presentValue,
-  compoundWithVariableReturns,
-  calculateSWP,
-  EMIResult,
-  FDResult,
-} from "finance-formulas";
+## Design Philosophy
 
-const emiResult: EMIResult = calculateEMI(500000, 8.5, 20);
-const fdResult: FDResult = calculateFD(100000, 7, 5);
-const totalInt: number = calculateTotalInterest(500000, 4339, 20);
-const doubleTime: number = timeToDouble(7);
-const corpus: number = retirementCorpus(50000, 3, 20, 30, 7);
-const futureValue: number = lumpsumFutureValue(1000, 5, 10);
-const presentVal: number = presentValue(1629, 5, 10);
-const variableCompound: number = compoundWithVariableReturns(
-  1000,
-  [4, 9, -2, 12],
-);
-const swpMonths: number = calculateSWP(1000000, 15000, 6);
-```
+- Pure functions
+- No runtime dependencies
+- Tree-shakable exports
+- Fully typed TypeScript API
+- Tested calculator behavior
+- Tiny surface area
+- Works in JavaScript and TypeScript
 
-## Testing
+## Roadmap
 
-Run tests with:
+More calculators are coming.
 
-```bash
-npm test
-```
+- XIRR
+- IRR
+- NPV
+- Inflation-adjusted retirement planning
+- Step-up SIP
+- Goal-based investment calculator
+- Loan prepayment calculator
+- Debt snowball calculator
+- Asset allocation helpers
+- Tax-aware return calculators
 
-Run tests with coverage:
+Have a formula you keep rewriting? Open an issue or send a PR.
 
-```bash
-npm run test:coverage
-```
+## Call To Action
 
-## API Reference
+If this saves you from writing one more finance formula by hand:
 
-### `calculateSIP(monthlyInvestment: number, annualRate: number, years: number): number`
+- Star the repo
+- Share it with a developer building money tools
+- Use it in your next fintech side project
+- Contribute a calculator the ecosystem needs
 
-Calculates the future value of a Systematic Investment Plan (SIP).
+Small formulas power big products.
 
-- `monthlyInvestment`: Monthly investment amount
-- `annualRate`: Annual return rate (percentage)
-- `years`: Investment period in years
+## Footer Tagline
 
-### `calculateSIPWithInflation(monthlyInvestment: number, annualRate: number, inflationRate: number, years: number): number`
-
-Calculates the inflation-adjusted future value of a SIP.
-
-- `monthlyInvestment`: Monthly investment amount
-- `annualRate`: Annual return rate (percentage)
-- `inflationRate`: Annual inflation rate (percentage)
-- `years`: Investment period in years
-
-### `calculateSWP(corpus: number, withdrawalPerMonth: number, annualReturn: number): number`
-
-Calculates how many months a Systematic Withdrawal Plan (SWP) corpus will last.
-
-- `corpus`: Initial retirement or investment corpus
-- `withdrawalPerMonth`: Amount withdrawn every month
-- `annualReturn`: Expected annual return rate (percentage)
-
-Returns the number of months the corpus will last, capped at 1000 months.
-
-**Example:**
-
-```typescript
-// Withdraw ₹15,000/month from ₹10,00,000 at 6% annual return
-calculateSWP(1000000, 15000, 6);
-// → 82
-```
-
-### `calculateEMI(loanAmount: number, annualRate: number, years: number): EMIResult`
-
-Calculates Equated Monthly Installment for a loan.
-
-- `loanAmount`: Total loan amount
-- `annualRate`: Annual interest rate (percentage)
-- `years`: Loan tenure in years
-
-Returns:
-
-```typescript
-{
-  emi: number; // Monthly EMI amount
-  totalPayment: number; // Total amount to be paid
-  totalInterest: number; // Total interest to be paid
-}
-```
-
-### `calculateFD(principal: number, annualRate: number, years: number): FDResult`
-
-Calculates Fixed Deposit maturity amount.
-
-- `principal`: Initial deposit amount
-- `annualRate`: Annual interest rate (percentage)
-- `years`: Deposit period in years
-
-Returns:
-
-```typescript
-{
-  maturityAmount: number; // Final maturity amount
-  interestEarned: number; // Total interest earned
-}
-```
-
-### `calculateTotalInterest(principal: number, emi: number, years: number): number`
-
-Calculates total interest paid on a loan.
-
-- `principal`: Principal loan amount
-- `emi`: Monthly EMI amount
-- `years`: Loan tenure in years
-
-Useful complement to `calculateEMI` for understanding the true cost of borrowing.
-
-**Example:**
-
-```typescript
-// Get EMI for a 500000 loan at 8.5% for 20 years
-const emiResult = calculateEMI(500000, 8.5, 20);
-// → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }
-
-// Calculate total interest separately
-const totalInterest = calculateTotalInterest(500000, 4339, 20);
-// → 541360
-```
-
-### `timeToDouble(rate: number): number`
-
-Estimates years required to double money using the Rule of 72.
-
-The Rule of 72 is a simple formula that estimates how long it will take
-for an investment to double in value at a given annual interest rate.
-It's a quick mental math approximation that's surprisingly accurate
-for interest rates between 5% and 10%.
-
-- `rate`: Annual interest rate (in percentage, e.g., 7 for 7%)
-
-Returns estimated years to double the investment.
-
-**Example:**
-
-```typescript
-// At 7% annual return, money doubles in about 10.29 years
-timeToDouble(7);
-// → 10.285714285714286
-
-// At 8% annual return, money doubles in about 9 years
-timeToDouble(8);
-// → 9
-```
-
-### `calculateCAGR(beginValue: number, endValue: number, years: number): number`
-
-Calculates Compound Annual Growth Rate.
-
-- `beginValue`: Initial value
-- `endValue`: Final value
-- `years`: Time period in years
-
-Returns the CAGR as a percentage (rounded to nearest integer).
-
-### `lumpsumFutureValue(principal: number, annualRate: number, years: number): number`
-
-Calculates the future value of a lump sum investment using compound interest.
-
-Used when someone invests once and lets it grow over time.
-
-Formula: FV = P (1 + r)^n
-
-- `principal`: Initial investment amount (present value)
-- `annualRate`: Annual interest rate as a percentage (e.g., 5 for 5%)
-- `years`: Number of years the investment will grow
-
-Returns the future value of the investment (rounded to nearest integer).
-
-**Example:**
-
-```typescript
-// Calculate future value of $1000 at 5% annual rate for 10 years
-lumpsumFutureValue(1000, 5, 10);
-// → 1629
-
-// Calculate future value of ₹50000 at 7% for 5 years
-lumpsumFutureValue(50000, 7, 5);
-// → 70128
-```
-
-### `presentValue(futureValue: number, annualRate: number, years: number): number`
-
-Calculates the present value of future money using compound interest.
-
-Used to know today's value of future money. This is the reverse of future value calculation.
-
-Formula: PV = FV / (1 + r)^n
-
-- `futureValue`: Future value amount
-- `annualRate`: Annual interest rate as a percentage (e.g., 5 for 5%)
-- `years`: Number of years until the future value is received
-
-Returns the present value of the future amount (rounded to nearest integer).
-
-**Example:**
-
-```typescript
-// Calculate present value of $1629 received after 10 years at 5% annual rate
-presentValue(1629, 5, 10);
-// → 1000
-
-// Calculate present value of ₹70128 received after 5 years at 7% annual rate
-presentValue(70128, 7, 5);
-// → 50000
-```
-
-### `compoundWithVariableReturns(principal: number, yearlyReturns: number[]): number`
-
-Calculates compound value with variable yearly returns.
-
-Used when investment returns fluctuate year to year, providing a more realistic
-view of compounding in real-world scenarios where returns vary based on market conditions.
-
-Formula: Final Value = Principal × (1 + r₁) × (1 + r₂) × ... × (1 + rₙ)
-
-- `principal`: Initial investment amount
-- `yearlyReturns`: Array of annual returns as percentages (e.g., [4, 9, -2, 12] for 4%, 9%, -2%, 12%)
-
-Returns the final value after applying all yearly returns (rounded to nearest integer).
-
-**Example:**
-
-```typescript
-// Portfolio with variable returns over 4 years: 4%, 9%, -2%, 12%
-compoundWithVariableReturns(1000, [4, 9, -2, 12]);
-// → 1244
-
-// Real market scenario: mixed positive and negative returns
-compoundWithVariableReturns(10000, [5, -3, 8, 12, -1, 6]);
-// → 12485
-
-// High volatility scenario: recover from major loss
-compoundWithVariableReturns(1000, [-50, 100]);
-// → 1000
-```
-
-### `retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number`
-
-Calculates the lump sum retirement corpus needed to sustain expenses
-throughout retirement, accounting for inflation during the accumulation
-phase and investment returns during the retirement phase.
-
-This function helps answer: "How much money do I need at retirement?"
-
-- `monthlyExpense`: Current monthly expense amount
-- `inflationRate`: Annual inflation rate (percentage, e.g., 3 for 3%)
-- `yearsToRetirement`: Number of years until retirement
-- `yearsAfterRetirement`: Number of years to sustain in retirement
-- `returnRate`: Expected annual return rate (percentage, e.g., 7 for 7%)
-
-Returns the required retirement corpus amount (rounded to nearest integer).
-
-**Example:**
-
-```typescript
-// Calculate corpus needed for retirement:
-// - Current monthly expense: ₹50,000
-// - Inflation rate: 3% annually
-// - 20 years until retirement
-// - 30 years of retirement to sustain
-// - Expected returns: 7% annually
-retirementCorpus(50000, 3, 20, 30, 7);
-// → 13447265
-
-// For lower monthly expenses
-retirementCorpus(30000, 3, 20, 30, 7);
-// → 8068359
-```
+Build the product. Let `finance-formulas` handle the math.
