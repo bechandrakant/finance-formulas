@@ -9,6 +9,7 @@ import { retirementCorpus } from "./calculators/retirementCorpus";
 import { lumpsumFutureValue } from "./calculators/futureValue";
 import { presentValue } from "./calculators/presentValue";
 import { compoundWithVariableReturns } from "./calculators/variableReturn";
+import { calculateSWP } from "./calculators/swp";
 
 // Re-export all calculator functions
 export {
@@ -23,5 +24,6 @@ export {
   lumpsumFutureValue,
   presentValue,
   compoundWithVariableReturns,
+  calculateSWP,
 };
 export type { EMIResult, FDResult };

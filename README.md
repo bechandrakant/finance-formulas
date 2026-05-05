@@ -29,6 +29,7 @@ import {
   lumpsumFutureValue,
   presentValue,
   compoundWithVariableReturns,
+  calculateSWP,
 } from "finance-formulas";
 
 // SIP
@@ -74,6 +75,10 @@ presentValue(1629, 5, 10);
 // Variable Return Compounding
 compoundWithVariableReturns(1000, [4, 9, -2, 12]);
 // → 1244
+
+// SWP
+calculateSWP(1000000, 15000, 6);
+// → 82
 ```
 
 ## TypeScript Support
@@ -93,6 +98,7 @@ import {
   lumpsumFutureValue,
   presentValue,
   compoundWithVariableReturns,
+  calculateSWP,
   EMIResult,
   FDResult,
 } from "finance-formulas";
@@ -108,6 +114,7 @@ const variableCompound: number = compoundWithVariableReturns(
   1000,
   [4, 9, -2, 12],
 );
+const swpMonths: number = calculateSWP(1000000, 15000, 6);
 ```
 
 ## Testing
@@ -142,6 +149,24 @@ Calculates the inflation-adjusted future value of a SIP.
 - `annualRate`: Annual return rate (percentage)
 - `inflationRate`: Annual inflation rate (percentage)
 - `years`: Investment period in years
+
+### `calculateSWP(corpus: number, withdrawalPerMonth: number, annualReturn: number): number`
+
+Calculates how many months a Systematic Withdrawal Plan (SWP) corpus will last.
+
+- `corpus`: Initial retirement or investment corpus
+- `withdrawalPerMonth`: Amount withdrawn every month
+- `annualReturn`: Expected annual return rate (percentage)
+
+Returns the number of months the corpus will last, capped at 1000 months.
+
+**Example:**
+
+```typescript
+// Withdraw ₹15,000/month from ₹10,00,000 at 6% annual return
+calculateSWP(1000000, 15000, 6);
+// → 82
+```
 
 ### `calculateEMI(loanAmount: number, annualRate: number, years: number): EMIResult`
 
