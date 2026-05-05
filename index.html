@@ -1,173 +1,121 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>finance-formulas - v1.7.0</title><meta name="description" content="Documentation for finance-formulas"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">finance-formulas - v1.7.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>finance-formulas - v1.7.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="finance-formulas-💰" class="tsd-anchor-link">finance-formulas 💰<a href="#finance-formulas-💰" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>finance-formulas - v1.8.0</title><meta name="description" content="Documentation for finance-formulas"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">finance-formulas - v1.8.0</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>finance-formulas - v1.8.0</h1></div><div class="tsd-panel tsd-typography"><h1 id="finance-formulas" class="tsd-anchor-link">finance-formulas<a href="#finance-formulas" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<h2 id="build-finance-calculators-in-minutes-not-weekends" class="tsd-anchor-link">Build finance calculators in minutes, not weekends.<a href="#build-finance-calculators-in-minutes-not-weekends" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Every fintech app eventually needs the same formulas.</p>
+<p>SIP. SWP. EMI. FD. CAGR. Retirement corpus. Present value. Future value.</p>
+<p>And somehow, every developer ends up rewriting them from scratch.</p>
+<p><code>finance-formulas</code> gives you clean, tested, TypeScript-first finance math you can drop into your app and ship.</p>
+<h2 id="the-finance-math-layer-your-app-deserves" class="tsd-anchor-link">The Finance Math Layer Your App Deserves<a href="#the-finance-math-layer-your-app-deserves" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Finance calculators look simple until they are wrong.</p>
+<p>A tiny rounding bug can break an EMI estimate. A slightly off return formula can mislead a retirement planner. A copied spreadsheet formula can quietly drift away from what your product actually needs.</p>
+<p>This package exists so developers, indie hackers, fintech builders, and students can stop rebuilding the same formulas again and again.</p>
+<p>Use it like a tiny finance engine:</p>
+<ul>
+<li>Plug it into calculators, dashboards, onboarding flows, and learning tools</li>
+<li>Trust tested formulas instead of random snippets</li>
+<li>Keep your app code focused on product, UI, and user experience</li>
+</ul>
+<h2 id="badges" class="tsd-anchor-link">Badges<a href="#badges" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><a href="https://www.npmjs.com/package/finance-formulas"><img src="https://img.shields.io/npm/v/finance-formulas.svg" alt="npm version"></a>
-<a href="https://github.com/bechandrakant/finance-formulas/actions"><img src="https://github.com/bechandrakant/finance-formulas/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-<a href="https://www.npmjs.com/package/finance-formulas"><img src="https://img.shields.io/npm/dm/finance-formulas" alt="Downloads"></a>
-<img src="https://img.shields.io/github/actions/workflow/status/bechandrakant/finance-formulas/ci.yml" alt="GitHub Workflow Status">
+<a href="https://www.npmjs.com/package/finance-formulas"><img src="https://img.shields.io/npm/dw/finance-formulas" alt="Downloads"></a>
 <img src="https://img.shields.io/npm/l/finance-formulas" alt="License">
-<img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript">
-<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/semantic--release-automated-e10079?logo=semantic-release" alt="semantic-release"></a></p>
-<p>Simple finance calculators for JavaScript/TypeScript with full type safety and comprehensive tests.</p>
+<a href="https://github.com/bechandrakant/finance-formulas/actions"><img src="https://github.com/bechandrakant/finance-formulas/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<img src="https://img.shields.io/badge/TypeScript-supported-blue" alt="TypeScript"></p>
+<h2 id="why-this-exists" class="tsd-anchor-link">Why This Exists<a href="#why-this-exists" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Finance math is easy to underestimate.</p>
+<p>You start with one SIP calculator.</p>
+<p>Then someone asks for inflation.</p>
+<p>Then EMI.</p>
+<p>Then retirement corpus.</p>
+<p>Then SWP for FIRE planning.</p>
+<p>Then variable returns because real markets are not flat lines.</p>
+<p>Before you know it, your app has a pile of formulas, edge cases, rounding differences, and tests you did not plan to write.</p>
+<p><code>finance-formulas</code> packages those battle-tested formulas into simple, predictable functions.</p>
+<p>No drama. No hidden state. Just numbers in, numbers out.</p>
+<h2 id="features" class="tsd-anchor-link">Features<a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>SIP calculator for monthly wealth building</li>
+<li>SWP calculator for retirement and FIRE withdrawal planning</li>
+<li>EMI calculator for loans and mortgages</li>
+<li>FD calculator for fixed deposit maturity values</li>
+<li>CAGR calculator for investment growth comparison</li>
+<li>Present Value and Future Value calculators</li>
+<li>Retirement Corpus calculator for long-term planning</li>
+<li>Rule of 72 / Time to Double calculator</li>
+<li>Variable Returns compounding for real-world market scenarios</li>
+<li>Inflation-adjusted SIP support</li>
+<li>Total loan interest calculation</li>
+</ul>
 <h2 id="install" class="tsd-anchor-link">Install<a href="#install" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p>npm install finance-formulas</p>
-<h2 id="usage" class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSIP</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSIPWithInflation</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateEMI</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateFD</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateCAGR</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateTotalInterest</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">timeToDouble</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">retirementCorpus</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">lumpsumFutureValue</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">presentValue</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">compoundWithVariableReturns</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSWP</span><span class="hl-1">,</span><br/><span class="hl-1">} </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// SIP</span><br/><span class="hl-5">calculateSIP</span><span class="hl-1">(</span><span class="hl-6">5000</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 1161695</span><br/><br/><span class="hl-4">// SIP with inflation adjustment</span><br/><span class="hl-5">calculateSIPWithInflation</span><span class="hl-1">(</span><span class="hl-6">5000</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 864410</span><br/><br/><span class="hl-4">// EMI</span><br/><span class="hl-5">calculateEMI</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">8.5</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-4">// → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }</span><br/><br/><span class="hl-4">// Total Interest Paid</span><br/><span class="hl-5">calculateTotalInterest</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">4339</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-4">// → 541360</span><br/><br/><span class="hl-4">// Time to Double Money (Rule of 72)</span><br/><span class="hl-5">timeToDouble</span><span class="hl-1">(</span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-4">// → 10.285714285714286</span><br/><br/><span class="hl-4">// FD</span><br/><span class="hl-5">calculateFD</span><span class="hl-1">(</span><span class="hl-6">100000</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">);</span><br/><span class="hl-4">// → { maturityAmount: 140255, interestEarned: 40255 }</span><br/><br/><span class="hl-4">// CAGR</span><br/><span class="hl-5">calculateCAGR</span><span class="hl-1">(</span><span class="hl-6">10000</span><span class="hl-1">, </span><span class="hl-6">20000</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">);</span><br/><span class="hl-4">// → 26 (%)</span><br/><br/><span class="hl-4">// Retirement Corpus</span><br/><span class="hl-5">retirementCorpus</span><span class="hl-1">(</span><span class="hl-6">50000</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-4">// → 13447265</span><br/><br/><span class="hl-4">// Lump Sum Future Value</span><br/><span class="hl-5">lumpsumFutureValue</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 1629</span><br/><br/><span class="hl-4">// Present Value</span><br/><span class="hl-5">presentValue</span><span class="hl-1">(</span><span class="hl-6">1629</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 1000</span><br/><br/><span class="hl-4">// Variable Return Compounding</span><br/><span class="hl-5">compoundWithVariableReturns</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, [</span><span class="hl-6">4</span><span class="hl-1">, </span><span class="hl-6">9</span><span class="hl-1">, -</span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">]);</span><br/><span class="hl-4">// → 1244</span><br/><br/><span class="hl-4">// SWP</span><br/><span class="hl-5">calculateSWP</span><span class="hl-1">(</span><span class="hl-6">1000000</span><span class="hl-1">, </span><span class="hl-6">15000</span><span class="hl-1">, </span><span class="hl-6">6</span><span class="hl-1">);</span><br/><span class="hl-4">// → 82</span>
+<pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">finance-formulas</span>
 </code><button type="button">Copy</button></pre>
 
-<h2 id="typescript-support" class="tsd-anchor-link">TypeScript Support<a href="#typescript-support" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p>This package includes full TypeScript definitions. All functions are properly typed:</p>
-<pre><code class="typescript"><span class="hl-0">import</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSIP</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSIPWithInflation</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateEMI</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateFD</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateCAGR</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateTotalInterest</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">timeToDouble</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">retirementCorpus</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">lumpsumFutureValue</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">presentValue</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">compoundWithVariableReturns</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">calculateSWP</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">EMIResult</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-2">FDResult</span><span class="hl-1">,</span><br/><span class="hl-1">} </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">emiResult</span><span class="hl-1">: </span><span class="hl-9">EMIResult</span><span class="hl-1"> = </span><span class="hl-5">calculateEMI</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">8.5</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">fdResult</span><span class="hl-1">: </span><span class="hl-9">FDResult</span><span class="hl-1"> = </span><span class="hl-5">calculateFD</span><span class="hl-1">(</span><span class="hl-6">100000</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">totalInt</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">calculateTotalInterest</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">4339</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">doubleTime</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">timeToDouble</span><span class="hl-1">(</span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">corpus</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">retirementCorpus</span><span class="hl-1">(</span><span class="hl-6">50000</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">futureValue</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">lumpsumFutureValue</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">presentVal</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">presentValue</span><span class="hl-1">(</span><span class="hl-6">1629</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">variableCompound</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">compoundWithVariableReturns</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-6">1000</span><span class="hl-1">,</span><br/><span class="hl-1">  [</span><span class="hl-6">4</span><span class="hl-1">, </span><span class="hl-6">9</span><span class="hl-1">, -</span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">],</span><br/><span class="hl-1">);</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">swpMonths</span><span class="hl-1">: </span><span class="hl-9">number</span><span class="hl-1"> = </span><span class="hl-5">calculateSWP</span><span class="hl-1">(</span><span class="hl-6">1000000</span><span class="hl-1">, </span><span class="hl-6">15000</span><span class="hl-1">, </span><span class="hl-6">6</span><span class="hl-1">);</span>
+<pre><code class="bash"><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">finance-formulas</span>
 </code><button type="button">Copy</button></pre>
 
-<h2 id="testing" class="tsd-anchor-link">Testing<a href="#testing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p>Run tests with:</p>
-<pre><code class="bash"><span class="hl-5">npm</span><span class="hl-1"> </span><span class="hl-3">test</span>
+<pre><code class="bash"><span class="hl-0">pnpm</span><span class="hl-1"> </span><span class="hl-2">add</span><span class="hl-1"> </span><span class="hl-2">finance-formulas</span>
 </code><button type="button">Copy</button></pre>
 
-<p>Run tests with coverage:</p>
-<pre><code class="bash"><span class="hl-5">npm</span><span class="hl-1"> </span><span class="hl-3">run</span><span class="hl-1"> </span><span class="hl-3">test:coverage</span>
+<h2 id="quick-examples" class="tsd-anchor-link">Quick Examples<a href="#quick-examples" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="plan-monthly-wealth-growth" class="tsd-anchor-link">Plan Monthly Wealth Growth<a href="#plan-monthly-wealth-growth" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="ts"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">calculateSIP</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">calculateSIP</span><span class="hl-1">(</span><span class="hl-5">5000</span><span class="hl-1">, </span><span class="hl-5">12</span><span class="hl-1">, </span><span class="hl-5">10</span><span class="hl-1">);</span><br/><span class="hl-6">// 1161695</span>
 </code><button type="button">Copy</button></pre>
 
-<h2 id="api-reference" class="tsd-anchor-link">API Reference<a href="#api-reference" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<h3 id="_" class="tsd-anchor-link"><code>calculateSIP(monthlyInvestment: number, annualRate: number, years: number): number</code><a href="#_" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates the future value of a Systematic Investment Plan (SIP).</p>
+<h3 id="estimate-how-long-retirement-money-lasts" class="tsd-anchor-link">Estimate How Long Retirement Money Lasts<a href="#estimate-how-long-retirement-money-lasts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="ts"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">calculateSWP</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">calculateSWP</span><span class="hl-1">(</span><span class="hl-5">1000000</span><span class="hl-1">, </span><span class="hl-5">15000</span><span class="hl-1">, </span><span class="hl-5">6</span><span class="hl-1">);</span><br/><span class="hl-6">// 82 months</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="show-loan-emi-instantly" class="tsd-anchor-link">Show Loan EMI Instantly<a href="#show-loan-emi-instantly" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="ts"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">calculateEMI</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">calculateEMI</span><span class="hl-1">(</span><span class="hl-5">500000</span><span class="hl-1">, </span><span class="hl-5">8.5</span><span class="hl-1">, </span><span class="hl-5">20</span><span class="hl-1">);</span><br/><span class="hl-6">// { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="model-real-world-market-returns" class="tsd-anchor-link">Model Real-World Market Returns<a href="#model-real-world-market-returns" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<pre><code class="ts"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">compoundWithVariableReturns</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&quot;finance-formulas&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">compoundWithVariableReturns</span><span class="hl-1">(</span><span class="hl-5">1000</span><span class="hl-1">, [</span><span class="hl-5">4</span><span class="hl-1">, </span><span class="hl-5">9</span><span class="hl-1">, -</span><span class="hl-5">2</span><span class="hl-1">, </span><span class="hl-5">12</span><span class="hl-1">]);</span><br/><span class="hl-6">// 1244</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="who-is-this-for" class="tsd-anchor-link">Who Is This For?<a href="#who-is-this-for" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <ul>
-<li><code>monthlyInvestment</code>: Monthly investment amount</li>
-<li><code>annualRate</code>: Annual return rate (percentage)</li>
-<li><code>years</code>: Investment period in years</li>
+<li>Fintech apps that need fast, reliable calculators</li>
+<li>Indie hackers shipping money tools</li>
+<li>SaaS dashboards with finance widgets</li>
+<li>FIRE and retirement planning projects</li>
+<li>Interview prep and coding practice</li>
+<li>Students learning finance math</li>
+<li>Builders tired of copying formulas from random blog posts</li>
 </ul>
-<h3 id="_-1" class="tsd-anchor-link"><code>calculateSIPWithInflation(monthlyInvestment: number, annualRate: number, inflationRate: number, years: number): number</code><a href="#_-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates the inflation-adjusted future value of a SIP.</p>
+<h2 id="design-philosophy" class="tsd-anchor-link">Design Philosophy<a href="#design-philosophy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <ul>
-<li><code>monthlyInvestment</code>: Monthly investment amount</li>
-<li><code>annualRate</code>: Annual return rate (percentage)</li>
-<li><code>inflationRate</code>: Annual inflation rate (percentage)</li>
-<li><code>years</code>: Investment period in years</li>
+<li>Pure functions</li>
+<li>No runtime dependencies</li>
+<li>Tree-shakable exports</li>
+<li>Fully typed TypeScript API</li>
+<li>Tested calculator behavior</li>
+<li>Tiny surface area</li>
+<li>Works in JavaScript and TypeScript</li>
 </ul>
-<h3 id="_-2" class="tsd-anchor-link"><code>calculateSWP(corpus: number, withdrawalPerMonth: number, annualReturn: number): number</code><a href="#_-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates how many months a Systematic Withdrawal Plan (SWP) corpus will last.</p>
+<h2 id="roadmap" class="tsd-anchor-link">Roadmap<a href="#roadmap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>More calculators are coming.</p>
 <ul>
-<li><code>corpus</code>: Initial retirement or investment corpus</li>
-<li><code>withdrawalPerMonth</code>: Amount withdrawn every month</li>
-<li><code>annualReturn</code>: Expected annual return rate (percentage)</li>
+<li>XIRR</li>
+<li>IRR</li>
+<li>NPV</li>
+<li>Inflation-adjusted retirement planning</li>
+<li>Step-up SIP</li>
+<li>Goal-based investment calculator</li>
+<li>Loan prepayment calculator</li>
+<li>Debt snowball calculator</li>
+<li>Asset allocation helpers</li>
+<li>Tax-aware return calculators</li>
 </ul>
-<p>Returns the number of months the corpus will last, capped at 1000 months.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Withdraw ₹15,000/month from ₹10,00,000 at 6% annual return</span><br/><span class="hl-5">calculateSWP</span><span class="hl-1">(</span><span class="hl-6">1000000</span><span class="hl-1">, </span><span class="hl-6">15000</span><span class="hl-1">, </span><span class="hl-6">6</span><span class="hl-1">);</span><br/><span class="hl-4">// → 82</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-3" class="tsd-anchor-link"><code>calculateEMI(loanAmount: number, annualRate: number, years: number): EMIResult</code><a href="#_-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates Equated Monthly Installment for a loan.</p>
+<p>Have a formula you keep rewriting? Open an issue or send a PR.</p>
+<h2 id="call-to-action" class="tsd-anchor-link">Call To Action<a href="#call-to-action" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>If this saves you from writing one more finance formula by hand:</p>
 <ul>
-<li><code>loanAmount</code>: Total loan amount</li>
-<li><code>annualRate</code>: Annual interest rate (percentage)</li>
-<li><code>years</code>: Loan tenure in years</li>
+<li>Star the repo</li>
+<li>Share it with a developer building money tools</li>
+<li>Use it in your next fintech side project</li>
+<li>Contribute a calculator the ecosystem needs</li>
 </ul>
-<p>Returns:</p>
-<pre><code class="typescript"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-10">emi</span><span class="hl-1">: </span><span class="hl-2">number</span><span class="hl-1">; </span><span class="hl-4">// Monthly EMI amount</span><br/><span class="hl-1">  </span><span class="hl-10">totalPayment</span><span class="hl-1">: </span><span class="hl-2">number</span><span class="hl-1">; </span><span class="hl-4">// Total amount to be paid</span><br/><span class="hl-1">  </span><span class="hl-10">totalInterest</span><span class="hl-1">: </span><span class="hl-2">number</span><span class="hl-1">; </span><span class="hl-4">// Total interest to be paid</span><br/><span class="hl-1">}</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-4" class="tsd-anchor-link"><code>calculateFD(principal: number, annualRate: number, years: number): FDResult</code><a href="#_-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates Fixed Deposit maturity amount.</p>
-<ul>
-<li><code>principal</code>: Initial deposit amount</li>
-<li><code>annualRate</code>: Annual interest rate (percentage)</li>
-<li><code>years</code>: Deposit period in years</li>
-</ul>
-<p>Returns:</p>
-<pre><code class="typescript"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-10">maturityAmount</span><span class="hl-1">: </span><span class="hl-2">number</span><span class="hl-1">; </span><span class="hl-4">// Final maturity amount</span><br/><span class="hl-1">  </span><span class="hl-10">interestEarned</span><span class="hl-1">: </span><span class="hl-2">number</span><span class="hl-1">; </span><span class="hl-4">// Total interest earned</span><br/><span class="hl-1">}</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-5" class="tsd-anchor-link"><code>calculateTotalInterest(principal: number, emi: number, years: number): number</code><a href="#_-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates total interest paid on a loan.</p>
-<ul>
-<li><code>principal</code>: Principal loan amount</li>
-<li><code>emi</code>: Monthly EMI amount</li>
-<li><code>years</code>: Loan tenure in years</li>
-</ul>
-<p>Useful complement to <code>calculateEMI</code> for understanding the true cost of borrowing.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Get EMI for a 500000 loan at 8.5% for 20 years</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">emiResult</span><span class="hl-1"> = </span><span class="hl-5">calculateEMI</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">8.5</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-4">// → { emi: 4339, totalPayment: 1041388, totalInterest: 541388 }</span><br/><br/><span class="hl-4">// Calculate total interest separately</span><br/><span class="hl-7">const</span><span class="hl-1"> </span><span class="hl-8">totalInterest</span><span class="hl-1"> = </span><span class="hl-5">calculateTotalInterest</span><span class="hl-1">(</span><span class="hl-6">500000</span><span class="hl-1">, </span><span class="hl-6">4339</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">);</span><br/><span class="hl-4">// → 541360</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-6" class="tsd-anchor-link"><code>timeToDouble(rate: number): number</code><a href="#_-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Estimates years required to double money using the Rule of 72.</p>
-<p>The Rule of 72 is a simple formula that estimates how long it will take
-for an investment to double in value at a given annual interest rate.
-It's a quick mental math approximation that's surprisingly accurate
-for interest rates between 5% and 10%.</p>
-<ul>
-<li><code>rate</code>: Annual interest rate (in percentage, e.g., 7 for 7%)</li>
-</ul>
-<p>Returns estimated years to double the investment.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// At 7% annual return, money doubles in about 10.29 years</span><br/><span class="hl-5">timeToDouble</span><span class="hl-1">(</span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-4">// → 10.285714285714286</span><br/><br/><span class="hl-4">// At 8% annual return, money doubles in about 9 years</span><br/><span class="hl-5">timeToDouble</span><span class="hl-1">(</span><span class="hl-6">8</span><span class="hl-1">);</span><br/><span class="hl-4">// → 9</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-7" class="tsd-anchor-link"><code>calculateCAGR(beginValue: number, endValue: number, years: number): number</code><a href="#_-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates Compound Annual Growth Rate.</p>
-<ul>
-<li><code>beginValue</code>: Initial value</li>
-<li><code>endValue</code>: Final value</li>
-<li><code>years</code>: Time period in years</li>
-</ul>
-<p>Returns the CAGR as a percentage (rounded to nearest integer).</p>
-<h3 id="_-8" class="tsd-anchor-link"><code>lumpsumFutureValue(principal: number, annualRate: number, years: number): number</code><a href="#_-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates the future value of a lump sum investment using compound interest.</p>
-<p>Used when someone invests once and lets it grow over time.</p>
-<p>Formula: FV = P (1 + r)^n</p>
-<ul>
-<li><code>principal</code>: Initial investment amount (present value)</li>
-<li><code>annualRate</code>: Annual interest rate as a percentage (e.g., 5 for 5%)</li>
-<li><code>years</code>: Number of years the investment will grow</li>
-</ul>
-<p>Returns the future value of the investment (rounded to nearest integer).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Calculate future value of $1000 at 5% annual rate for 10 years</span><br/><span class="hl-5">lumpsumFutureValue</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 1629</span><br/><br/><span class="hl-4">// Calculate future value of ₹50000 at 7% for 5 years</span><br/><span class="hl-5">lumpsumFutureValue</span><span class="hl-1">(</span><span class="hl-6">50000</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">);</span><br/><span class="hl-4">// → 70128</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-9" class="tsd-anchor-link"><code>presentValue(futureValue: number, annualRate: number, years: number): number</code><a href="#_-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates the present value of future money using compound interest.</p>
-<p>Used to know today's value of future money. This is the reverse of future value calculation.</p>
-<p>Formula: PV = FV / (1 + r)^n</p>
-<ul>
-<li><code>futureValue</code>: Future value amount</li>
-<li><code>annualRate</code>: Annual interest rate as a percentage (e.g., 5 for 5%)</li>
-<li><code>years</code>: Number of years until the future value is received</li>
-</ul>
-<p>Returns the present value of the future amount (rounded to nearest integer).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Calculate present value of $1629 received after 10 years at 5% annual rate</span><br/><span class="hl-5">presentValue</span><span class="hl-1">(</span><span class="hl-6">1629</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">, </span><span class="hl-6">10</span><span class="hl-1">);</span><br/><span class="hl-4">// → 1000</span><br/><br/><span class="hl-4">// Calculate present value of ₹70128 received after 5 years at 7% annual rate</span><br/><span class="hl-5">presentValue</span><span class="hl-1">(</span><span class="hl-6">70128</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">);</span><br/><span class="hl-4">// → 50000</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-10" class="tsd-anchor-link"><code>compoundWithVariableReturns(principal: number, yearlyReturns: number[]): number</code><a href="#_-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates compound value with variable yearly returns.</p>
-<p>Used when investment returns fluctuate year to year, providing a more realistic
-view of compounding in real-world scenarios where returns vary based on market conditions.</p>
-<p>Formula: Final Value = Principal × (1 + r₁) × (1 + r₂) × ... × (1 + rₙ)</p>
-<ul>
-<li><code>principal</code>: Initial investment amount</li>
-<li><code>yearlyReturns</code>: Array of annual returns as percentages (e.g., [4, 9, -2, 12] for 4%, 9%, -2%, 12%)</li>
-</ul>
-<p>Returns the final value after applying all yearly returns (rounded to nearest integer).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Portfolio with variable returns over 4 years: 4%, 9%, -2%, 12%</span><br/><span class="hl-5">compoundWithVariableReturns</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, [</span><span class="hl-6">4</span><span class="hl-1">, </span><span class="hl-6">9</span><span class="hl-1">, -</span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">]);</span><br/><span class="hl-4">// → 1244</span><br/><br/><span class="hl-4">// Real market scenario: mixed positive and negative returns</span><br/><span class="hl-5">compoundWithVariableReturns</span><span class="hl-1">(</span><span class="hl-6">10000</span><span class="hl-1">, [</span><span class="hl-6">5</span><span class="hl-1">, -</span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">8</span><span class="hl-1">, </span><span class="hl-6">12</span><span class="hl-1">, -</span><span class="hl-6">1</span><span class="hl-1">, </span><span class="hl-6">6</span><span class="hl-1">]);</span><br/><span class="hl-4">// → 12485</span><br/><br/><span class="hl-4">// High volatility scenario: recover from major loss</span><br/><span class="hl-5">compoundWithVariableReturns</span><span class="hl-1">(</span><span class="hl-6">1000</span><span class="hl-1">, [-</span><span class="hl-6">50</span><span class="hl-1">, </span><span class="hl-6">100</span><span class="hl-1">]);</span><br/><span class="hl-4">// → 1000</span>
-</code><button type="button">Copy</button></pre>
-
-<h3 id="_-11" class="tsd-anchor-link"><code>retirementCorpus(monthlyExpense: number, inflationRate: number, yearsToRetirement: number, yearsAfterRetirement: number, returnRate: number): number</code><a href="#_-11" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<p>Calculates the lump sum retirement corpus needed to sustain expenses
-throughout retirement, accounting for inflation during the accumulation
-phase and investment returns during the retirement phase.</p>
-<p>This function helps answer: &quot;How much money do I need at retirement?&quot;</p>
-<ul>
-<li><code>monthlyExpense</code>: Current monthly expense amount</li>
-<li><code>inflationRate</code>: Annual inflation rate (percentage, e.g., 3 for 3%)</li>
-<li><code>yearsToRetirement</code>: Number of years until retirement</li>
-<li><code>yearsAfterRetirement</code>: Number of years to sustain in retirement</li>
-<li><code>returnRate</code>: Expected annual return rate (percentage, e.g., 7 for 7%)</li>
-</ul>
-<p>Returns the required retirement corpus amount (rounded to nearest integer).</p>
-<p><strong>Example:</strong></p>
-<pre><code class="typescript"><span class="hl-4">// Calculate corpus needed for retirement:</span><br/><span class="hl-4">// - Current monthly expense: ₹50,000</span><br/><span class="hl-4">// - Inflation rate: 3% annually</span><br/><span class="hl-4">// - 20 years until retirement</span><br/><span class="hl-4">// - 30 years of retirement to sustain</span><br/><span class="hl-4">// - Expected returns: 7% annually</span><br/><span class="hl-5">retirementCorpus</span><span class="hl-1">(</span><span class="hl-6">50000</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-4">// → 13447265</span><br/><br/><span class="hl-4">// For lower monthly expenses</span><br/><span class="hl-5">retirementCorpus</span><span class="hl-1">(</span><span class="hl-6">30000</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">20</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-6">7</span><span class="hl-1">);</span><br/><span class="hl-4">// → 8068359</span>
-</code><button type="button">Copy</button></pre>
-
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#finance-formulas-💰"><span>finance-<wbr/>formulas 💰</span></a><ul><li><a href="#install"><span>Install</span></a></li><li><a href="#usage"><span>Usage</span></a></li><li><a href="#typescript-support"><span>Type<wbr/>Script <wbr/>Support</span></a></li><li><a href="#testing"><span>Testing</span></a></li><li><a href="#api-reference"><span>API <wbr/>Reference</span></a></li><li><ul><li><a href="#_"><span></span></a></li><li><a href="#_-1"><span></span></a></li><li><a href="#_-2"><span></span></a></li><li><a href="#_-3"><span></span></a></li><li><a href="#_-4"><span></span></a></li><li><a href="#_-5"><span></span></a></li><li><a href="#_-6"><span></span></a></li><li><a href="#_-7"><span></span></a></li><li><a href="#_-8"><span></span></a></li><li><a href="#_-9"><span></span></a></li><li><a href="#_-10"><span></span></a></li><li><a href="#_-11"><span></span></a></li></ul></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">finance-formulas - v1.7.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+<p>Small formulas power big products.</p>
+<h2 id="footer-tagline" class="tsd-anchor-link">Footer Tagline<a href="#footer-tagline" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Build the product. Let <code>finance-formulas</code> handle the math.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#finance-formulas"><span>finance-<wbr/>formulas</span></a><ul><li><a href="#build-finance-calculators-in-minutes-not-weekends"><span>Build finance calculators in minutes, not weekends.</span></a></li><li><a href="#the-finance-math-layer-your-app-deserves"><span>The <wbr/>Finance <wbr/>Math <wbr/>Layer <wbr/>Your <wbr/>App <wbr/>Deserves</span></a></li><li><a href="#badges"><span>Badges</span></a></li><li><a href="#why-this-exists"><span>Why <wbr/>This <wbr/>Exists</span></a></li><li><a href="#features"><span>Features</span></a></li><li><a href="#install"><span>Install</span></a></li><li><a href="#quick-examples"><span>Quick <wbr/>Examples</span></a></li><li><ul><li><a href="#plan-monthly-wealth-growth"><span>Plan <wbr/>Monthly <wbr/>Wealth <wbr/>Growth</span></a></li><li><a href="#estimate-how-long-retirement-money-lasts"><span>Estimate <wbr/>How <wbr/>Long <wbr/>Retirement <wbr/>Money <wbr/>Lasts</span></a></li><li><a href="#show-loan-emi-instantly"><span>Show <wbr/>Loan <wbr/>EMI <wbr/>Instantly</span></a></li><li><a href="#model-real-world-market-returns"><span>Model <wbr/>Real-<wbr/>World <wbr/>Market <wbr/>Returns</span></a></li></ul></li><li><a href="#who-is-this-for"><span>Who <wbr/>Is <wbr/>This <wbr/>For?</span></a></li><li><a href="#design-philosophy"><span>Design <wbr/>Philosophy</span></a></li><li><a href="#roadmap"><span>Roadmap</span></a></li><li><a href="#call-to-action"><span>Call <wbr/>To <wbr/>Action</span></a></li><li><a href="#footer-tagline"><span>Footer <wbr/>Tagline</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">finance-formulas - v1.8.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
