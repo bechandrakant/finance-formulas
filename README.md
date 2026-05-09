@@ -82,6 +82,12 @@ yarn add finance-formulas
 pnpm add finance-formulas
 ```
 
+## Live Demo
+
+See all formulas implemented in a sample finance calculators website:
+
+[https://finance-calculators-indol.vercel.app/](https://finance-calculators-indol.vercel.app/)
+
 ## Quick Examples
 
 ### Plan Monthly Wealth Growth
