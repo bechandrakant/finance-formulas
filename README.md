@@ -62,6 +62,7 @@ No drama. No hidden state. Just numbers in, numbers out.
 - FD calculator for fixed deposit maturity values
 - CAGR calculator for investment growth comparison
 - Present Value and Future Value calculators
+- Real return calculator for inflation-adjusted return analysis
 - Retirement Corpus calculator for long-term planning
 - Rule of 72 / Time to Double calculator
 - Variable Returns compounding for real-world market scenarios
@@ -124,6 +125,15 @@ import { compoundWithVariableReturns } from "finance-formulas";
 
 compoundWithVariableReturns(1000, [4, 9, -2, 12]);
 // 1244
+```
+
+### Calculate Inflation-Adjusted Real Return
+
+```ts
+import { calculateRealReturn } from "finance-formulas";
+
+calculateRealReturn(10, 5);
+// 4.761904761904762
 ```
 
 ## Who Is This For?

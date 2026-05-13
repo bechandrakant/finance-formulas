@@ -30,6 +30,11 @@
       "require": "./dist/calculators/cagr.cjs",
       "types": "./dist/calculators/cagr.d.ts"
     },
+    "./real-return": {
+      "import": "./dist/calculators/realReturn.js",
+      "require": "./dist/calculators/realReturn.cjs",
+      "types": "./dist/calculators/realReturn.d.ts"
+    },
     "./total-interest": {
       "import": "./dist/calculators/totalInterest.js",
       "require": "./dist/calculators/totalInterest.cjs",
@@ -66,7 +71,7 @@
   "scripts": {
     "build": "npm run build:bundle && npm run build:split && npm run build:types",
     "build:bundle": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.cjs",
-    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts src/calculators/swp.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts src/calculators/swp.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
+    "build:split": "esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/realReturn.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts src/calculators/swp.ts --format=esm --outdir=dist/calculators && esbuild src/calculators/sip.ts src/calculators/emi.ts src/calculators/fd.ts src/calculators/cagr.ts src/calculators/realReturn.ts src/calculators/totalInterest.ts src/calculators/timeToDouble.ts src/calculators/futureValue.ts src/calculators/presentValue.ts src/calculators/variableReturn.ts src/calculators/swp.ts --format=cjs --outdir=dist/calculators --out-extension:.js=.cjs",
     "build:types": "tsc --emitDeclarationOnly --outDir dist",
     "test": "jest",
     "test:watch": "jest --watch",

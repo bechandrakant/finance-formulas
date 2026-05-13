@@ -4,6 +4,7 @@ import { calculateEMI, EMIResult } from "./calculators/emi";
 import { calculateFD, FDResult } from "./calculators/fd";
 import { calculateCAGR } from "./calculators/cagr";
 import { calculateTotalInterest } from "./calculators/totalInterest";
+import { calculateRealReturn } from "./calculators/realReturn";
 import { timeToDouble } from "./calculators/timeToDouble";
 import { retirementCorpus } from "./calculators/retirementCorpus";
 import { lumpsumFutureValue } from "./calculators/futureValue";
@@ -18,6 +19,7 @@ export {
   calculateEMI,
   calculateFD,
   calculateCAGR,
+  calculateRealReturn,
   calculateTotalInterest,
   timeToDouble,
   retirementCorpus,
